@@ -7,9 +7,11 @@ interface NavigateConetxtType {
   closeMobileNav: () => void;
 }
 
-const NavigationContext = createContext<NavigateConetxtType | undefined>(
-  undefined
-);
+export const NavigationContext = createContext<NavigateConetxtType>({
+  isMobileNavOpen: false,
+  setIsMobileNavOpen: () => {},
+  closeMobileNav: () => {},
+});
 export function NavigationProvider({
   children,
 }: {

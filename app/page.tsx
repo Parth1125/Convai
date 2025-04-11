@@ -1,7 +1,7 @@
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
+// https://mocki.io/v1/59f359b1-41c9-450e-a842-004a9649bc56
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-white to-gray-50/50 flex items-center justify-center">

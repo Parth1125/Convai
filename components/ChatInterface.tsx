@@ -45,12 +45,10 @@ const ChatInterface = ({ chatId, initialMessages }: ChatInterfaceProps) => {
     //start streaming the response
     try {
       const requestBody: ChatRequestBody = {
-        messages: messages.map((msg) =>
-          L({
-            role: msg.role,
-            content: msg.content,
-          })
-        ),
+        messages: messages.map((msg) => ({
+          role: msg.role,
+          content: msg.content,
+        })),
         newMessage: trimmedInput,
         chatId,
       };
